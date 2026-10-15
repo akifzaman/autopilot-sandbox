@@ -46,3 +46,21 @@ export function truncate(text, maxLength) {
   }
   return text.slice(0, maxLength - 1) + '…';
 }
+
+/**
+ * Return the maximum number in an array.
+ * @param {number[]} numbers
+ * @returns {number}
+ */
+export function max(numbers) {
+  if (!Array.isArray(numbers)) {
+    throw new TypeError('max expects an array of numbers');
+  }
+  for (const n of numbers) {
+    if (typeof n !== 'number') {
+      throw new TypeError('max expects an array of numbers');
+    }
+  }
+  // Math.max on empty array returns -Infinity, which matches JS semantics.
+  return numbers.length === 0 ? -Infinity : Math.max(...numbers);
+}
