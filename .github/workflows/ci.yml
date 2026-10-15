@@ -1,5 +1,5 @@
-# Hermes Autopilot CI template: Node.js. Copy to .github/workflows/ci.yml.
-# Job name `lint-and-test` is the required status check in branch protection.
+# autopilot-sandbox CI: Node template + a CI-only docs check (used to exercise the Autopilot CI fix loop).
+# Job name `lint-and-test` is the required status check in the protect-main ruleset.
 name: CI
 
 on:
@@ -29,3 +29,5 @@ jobs:
         run: npm run lint
       - name: Test
         run: npm test
+      - name: Docs check (CI only)
+        run: node scripts/check-readme-api.mjs
