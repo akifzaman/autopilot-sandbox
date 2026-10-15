@@ -36,7 +36,7 @@ so the task only counts as done once a human merges that PR.
 - Invalid `text` throws `TypeError`; invalid `maxLength` (0, -1, 2.5, `'5'`) throws `RangeError`.
 - `npm run lint` and `npm test` pass.
 
-## [ ] T3 — Add strutil CLI
+## [x] T3 — Add strutil CLI
 - spec: docs/spec/string-utils.md#cli
 - blocked-by: T1, T2
 
