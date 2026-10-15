@@ -1,0 +1,15 @@
+{
+  "name": "autopilot-sandbox",
+  "version": "0.1.0",
+  "description": "Tiny string utilities library used to exercise Hermes Autopilot.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "node scripts/lint.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
