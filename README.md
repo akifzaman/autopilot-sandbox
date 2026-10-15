@@ -7,6 +7,13 @@ npm run lint
 npm test
 ```
 
+## API
+
+- `capitalize(text)` — uppercase the first character, leave the rest unchanged.
+- `slugify(text)` — URL-friendly slug: lowercase, diacritics removed, `-` between words.
+
+## Docs
+
 - Spec: [docs/spec/string-utils.md](docs/spec/string-utils.md)
 - Tasks: [TASKS.md](TASKS.md)
 - Agent instructions: [AGENTS.md](AGENTS.md)
