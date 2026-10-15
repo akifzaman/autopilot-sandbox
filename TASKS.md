@@ -15,7 +15,7 @@ Autopilot ticks the box ([ ] -> [x]) inside the same PR that implements the task
 so the task only counts as done once a human merges that PR.
 -->
 
-## [ ] T1 — Add slugify
+## [x] T1 — Add slugify
 - spec: docs/spec/string-utils.md#slugify
 - blocked-by: none
 
