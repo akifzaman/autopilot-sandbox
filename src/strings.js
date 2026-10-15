@@ -46,3 +46,16 @@ export function truncate(text, maxLength) {
   }
   return text.slice(0, maxLength - 1) + '…';
 }
+
+/**
+ * Reverse a string by Unicode code points.
+ * @param {string} text
+ * @returns {string}
+ * @throws {TypeError} If text is not a string.
+ */
+export function reverse(text) {
+  if (typeof text !== 'string') {
+    throw new TypeError('reverse expects a string');
+  }
+  return [...text].reverse().join('');
+}

@@ -46,6 +46,24 @@ Throws `TypeError` for non-string input.
 | `truncate('hello world', 6)` | `'hello…'` |
 | `truncate('abc', 1)` | `'…'` |
 
+## reverse
+
+### Behaviour
+- Signature: `reverse(text: string): string`.
+- Returns the string reversed by Unicode code points.
+- Throws `TypeError` for non-string input.
+
+### Examples
+| Input | Output |
+|---|---|
+| `reverse('hello')` | `'olleh'` |
+| `reverse('😀')` | `'😀'` |
+| `reverse('ab😀cd')` | `'dc😀ba'` |
+| `reverse('')` | `''` |
+
+### Out of scope
+- Reversing by grapheme cluster (which would keep multi-code-point emoji intact).
+
 ## cli
 
 ### Behaviour
