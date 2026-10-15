@@ -25,7 +25,7 @@ so the task only counts as done once a human merges that PR.
 - Non-string input throws `TypeError`.
 - `npm run lint` and `npm test` pass.
 
-## [ ] T2 — Add truncate
+## [x] T2 — Add truncate
 - spec: docs/spec/string-utils.md#truncate
 - blocked-by: none
 

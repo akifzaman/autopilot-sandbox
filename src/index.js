@@ -1,1 +1,1 @@
-export { capitalize, slugify } from './strings.js';
+export { capitalize, slugify, truncate } from './strings.js';

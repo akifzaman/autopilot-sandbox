@@ -27,3 +27,21 @@ export function slugify(text) {
   s = s.replace(/^[-]+|[-]+$/g, '');
   return s;
 }
+/**
+ * Truncate a string to a maximum length, adding an ellipsis if truncated.
+ * @param {string} text
+ * @param {number} maxLength
+ * @returns {string}
+ */
+export function truncate(text, maxLength) {
+  if (typeof text !== 'string') {
+    throw new TypeError('truncate expects a string');
+  }
+  if (!Number.isInteger(maxLength) || maxLength < 1) {
+    throw new RangeError('truncate expects maxLength as integer >= 1');
+  }
+  if (text.length <= maxLength) {
+    return text;
+  }
+  return text.slice(0, maxLength - 1) + '…';
+}
