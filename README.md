@@ -10,3 +10,4 @@ npm test
 - Spec: [docs/spec/string-utils.md](docs/spec/string-utils.md)
 - Tasks: [TASKS.md](TASKS.md)
 - Agent instructions: [AGENTS.md](AGENTS.md)
+smoke note
