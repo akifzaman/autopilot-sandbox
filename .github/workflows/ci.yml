@@ -1,0 +1,31 @@
+# Hermes Autopilot CI template: Node.js. Copy to .github/workflows/ci.yml.
+# Job name `lint-and-test` is the required status check in branch protection.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - name: Install
+        run: if [ -f package-lock.json ]; then npm ci; elif [ -f package.json ] && grep -q '"dependencies"\|"devDependencies"' package.json; then npm install; fi
+      - name: Lint
+        run: npm run lint
+      - name: Test
+        run: npm test
