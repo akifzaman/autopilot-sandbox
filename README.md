@@ -12,6 +12,7 @@ npm test
 - `capitalize(text)` — uppercase the first character, leave the rest unchanged.
 - `slugify(text)` — URL-friendly slug: lowercase, diacritics removed, `-` between words.
 - `truncate(text, maxLength)` — shorten to maxLength, adding ellipsis if truncated.
+- `reverse(text)` — returns the string reversed by Unicode code points; throws TypeError for non-strings.
 
 ## Docs
 
