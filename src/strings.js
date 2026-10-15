@@ -46,3 +46,20 @@ export function truncate(text, maxLength) {
   }
   return text.slice(0, maxLength - 1) + '…';
 }
+
+/**
+ * Sum an array of numbers.
+ * @param {number[]} numbers
+ * @returns {number}
+ */
+export function sum(numbers) {
+  if (!Array.isArray(numbers)) {
+    throw new TypeError('sum expects an array of numbers');
+  }
+  return numbers.reduce((acc, n) => {
+    if (typeof n !== 'number') {
+      throw new TypeError('sum expects all elements to be numbers');
+    }
+    return acc + n;
+  }, 0);
+}
